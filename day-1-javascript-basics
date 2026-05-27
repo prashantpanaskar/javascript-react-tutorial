@@ -1,0 +1,53 @@
+const name = 'John'; //string
+let age = 30; //number
+const rating = 4.5; //number
+const isCool = true; //boolean
+const x = null; //null
+const y = undefined; //undefined
+const z = NaN; //NaN
+const person = {
+	name: 'John',
+	age: 30,
+	rating: 4.5,
+	isCool: true,
+}; //object
+const fruits = ['apple', 'banana', 'orange']; // array
+
+console.log('Name:', name, 'Type of Name:', typeof name);
+console.log('Age:', age, 'Type of age:', typeof age);
+console.log('Rating:', rating, 'Type of rating:', typeof rating);
+console.log('IsCool:', isCool, 'Type of isCool:', typeof isCool);
+console.log('Null Value:', x, 'Type of Null value:', typeof x);
+console.log('Undefined Value:', y, 'Type of Undefined Value:', typeof y);
+console.log('NaN Value:', z, 'Type of NaN Value:', typeof z);
+console.log('Person:', person, 'Type of person:', typeof person);
+console.log('Fruits:', fruits, 'Type of fruits:', typeof fruits);
+
+age = 25;
+//name = 'Jane'; // This will throw an error
+
+//Array of objects
+const employees = [
+	{
+		name: 'John',
+		address: {
+			street: '123 Main St',
+			city: 'Anytown',
+			state: 'CA',
+			zip: '12345',
+		},
+	},
+	{
+		name: 'Jane',
+		address: {
+			street: '456 Main St',
+			city: 'Anytown',
+			state: 'CA',
+			zip: '12345',
+		},
+	},
+];
+
+employees.forEach((e) => {
+	console.log(e.name);
+});
