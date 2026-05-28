@@ -1,0 +1,62 @@
+function greetUser(user) {
+	console.log('Hello ' + user.name, 'You are ' + user.age + ' years old');
+	console.log(`Hello ${user.name}. You are ${user.age} years old.`);
+}
+
+function greetUsers(users) {
+	users.forEach((user) => {
+		console.log('Hello ' + user.name, 'You are ' + user.age + ' years old');
+		console.log('+++++++++++++++++++++++++++++');
+	});
+}
+
+function returnGreetUser(user) {
+	return 'Hello ' + user.name + ' You are ' + user.age + ' years old';
+}
+
+const users = [
+	{
+		name: 'John',
+		age: 30,
+	},
+	{
+		name: 'Jane',
+		age: 25,
+	},
+];
+
+users.forEach((user) => {
+	greetUser(user);
+	console.log('===============================');
+});
+
+greetUsers(users);
+const message = returnGreetUser(users[0]);
+console.log(message);
+
+//Arrow functions
+function multiply(a, b) {
+	return a * b;
+}
+
+const arrowMultiply = (a, b) => a * b;
+
+console.log(multiply(5, 4), arrowMultiply(2, 3));
+console.log(typeof arrowMultiply);
+
+const canLogin = false;
+const hasAccess = false;
+
+if (canLogin && hasAccess) {
+	console.log('User is authorized to access the content');
+} else {
+	console.log('User is not authorized to access the content');
+}
+
+const isGuest = false;
+
+if (canLogin || isGuest) {
+    console.log('User is authorized to access the content');
+} else {
+    console.log('User is not authorized to access the content');
+}
